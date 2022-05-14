@@ -1,2 +1,2 @@
-$(document).ready(onReady);
+$(document).ready();
 
