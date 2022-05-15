@@ -1,15 +1,15 @@
 console.log('In script.js');
 
 $(document).ready(onReady);
-
+// Created global array
 let employeeArray = [];
-
+// targets any events or clicks and will run submit/or delete buttons
 function onReady() {
     console.log('Ready!');
     $(document).on('click', '#submit-btn', onSubmit);
     $(document).on('click', '#delete-btn', onDelete);
 }
-
+// This will delete/clear the table rows, columns, & data within
 function onDelete() {
     console.log('in onDelete()', $(this));
     let tr = $(this).parent().parent();
@@ -21,7 +21,7 @@ function onDelete() {
         .text()
     tr.remove();
 }
-
+// this function will take all data within the input fields and store them into the global array
 function onSubmit() {
     let firstName = $('#first-name').val();
     let lastName = $('#last-name').val();
@@ -38,7 +38,7 @@ function onSubmit() {
     };
 
     employeeArray.push(employObject);
-
+// pushes object items to the DOM
     $('#employee-table').append(`
         <tr>
             <td>${firstName}</td>
@@ -53,17 +53,17 @@ function onSubmit() {
             </td>
         </tr>
     `);
-
+// this clears the inputs values once the click submit event has occurred 
     $('#first-name').val('');
     $('#last-name').val('');
     $('#id-number').val('');
     $('#job-title').val('');
     $('#annual-salary').val('');
 
-
+// runs the function showTotal, see line 67 for function details
     showTotal();
 }
-
+// retrieves the total annual salary and calculate the monthly salary per employee
 function showTotal() {
     let monthlySalary = 0;
     for (let employee of employeeArray) {
@@ -77,8 +77,10 @@ function showTotal() {
         console.log(monthlySalary);
   }
   $('#monthly-Total').empty();
+// pushes monthly total to the DOM and sets fixed decimal to 2
   $('#monthly-Total').append(monthlySalary.toFixed(2));
   if (monthlySalary > 20000) {
+// adds a red background to monthly total if it exceeds $20,000
     $('#monthly-Total').parent().addClass('backGroundRed');
   }
 }
