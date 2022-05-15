@@ -5,6 +5,7 @@ $(document).ready(onReady);
 function onReady() {
     console.log('Ready!');
     $(document).on('click', '#submit-btn', onSubmit);
+    $(document).on('click', '#delete-btn', onDelete);
 }
 
 function onSubmit() {
@@ -34,4 +35,16 @@ function onSubmit() {
     $('#id-number').val('');
     $('#job-title').val('');
     $('#annual-salary').val('');
+}
+
+function onDelete() {
+    let tr = $(this).parent().parent();
+
+    let firstName = $(this)
+        .parent()
+        .siblings()
+        .first()
+        .text()
+    alert(`You just deleted ${firstName}`);
+    tr.remove();
 }
