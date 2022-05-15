@@ -8,6 +8,18 @@ function onReady() {
     $(document).on('click', '#delete-btn', onDelete);
 }
 
+function onDelete() {
+    console.log('in onDelete()', $(this));
+    let tr = $(this).parent().parent();
+
+    let firstName = $(this)
+        .parent()
+        .siblings()
+        .first()
+        .text()
+    tr.remove();
+}
+
 function onSubmit() {
     let firstName = $('#first-name').val();
     let lastName = $('#last-name').val();
@@ -23,7 +35,7 @@ function onSubmit() {
             <td>${jobTitle}</td>
             <td>${salary}</td>
             <td>
-                <button class="delete-btn">
+                <button id="delete-btn">
                     Delete
                 </button>
             </td>
@@ -37,14 +49,3 @@ function onSubmit() {
     $('#annual-salary').val('');
 }
 
-function onDelete() {
-    let tr = $(this).parent().parent();
-
-    let firstName = $(this)
-        .parent()
-        .siblings()
-        .first()
-        .text()
-    alert(`You just deleted ${firstName}`);
-    tr.remove();
-}
