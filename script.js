@@ -59,4 +59,23 @@ function onSubmit() {
     $('#id-number').val('');
     $('#job-title').val('');
     $('#annual-salary').val('');
+
+
+    showTotal();
+}
+
+function showTotal() {
+    let monthlySalary = 0;
+    for (let employee of employeeArray) {
+        // Tring to remove $ and commas from string
+        let salaryAsNumber = employee.salary.replace('$', '').replace(',', '');
+        // Convert string into a number
+        salaryAsNumber = Number(salaryAsNumber);
+        // grabbing one object at a time
+        console.log(salaryAsNumber);
+        monthlySalary+= salaryAsNumber/ 12;
+        console.log(monthlySalary);
+  }
+  $('#monthly-Total').empty();
+  $('#monthly-Total').append(monthlySalary.toFixed(2));
 }
