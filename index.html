@@ -16,18 +16,19 @@
   <div>
     <h2>Add Employee</h2>
   </div>
-  <div id="inputs">
-    <input id="input" placeholder="First Name" class="first_name"/>
-    <input id="input" placeholder="Last Name" class="last_name"/>
-    <input id="input" placeholder="ID" class="id"/>
-    <input id="input" placeholder="Title" class="title"/>
-    <input id="input" placeholder="Annual Salary" class="annual_salary"/>
-    <button style="display:block" type="button">Submit</button>
+  <div>
+    <input type="text" placeholder="First Name" id="first-name"/>
+    <input type="text" placeholder="Last Name" id="last-name"/>
+    <input type="text" placeholder="ID" id="id-number"/>
+    <input type="text" placeholder="Title" id="job-title"/>
+    <input type="text" placeholder="Annual Salary" id="annual-salary"/>
+    <button id="submit-btn" style="display:block" type="button">Submit</button>
   </div>
   <div>
     <h2>Employees</h2>
   </div>
   <table>
+    <thead>
       <tr>
           <th>First Name</th>
           <th>Last Name</th>
@@ -35,31 +36,12 @@
           <th>Title</th>
           <th>Annual Salary</th>
       </tr>
+    </thead>
+    <tbody id="employee-table">
       <tr>
-          <td>Jen</td>
-          <td>Barber</td>
-          <td>4521</td>
-          <td>Team Lead</td>
-          <td>$80,000</td>
-          <td style="text-align: center"><button>Delete</button></td>
       </tr>
-      <tr>
-        <td>Maurice</td>
-        <td>Moss</td>
-        <td>8724</td>
-        <td>Support Team</td>
-        <td>$58,000</td>
-        <td style="text-align: center"><button>Delete</button></td>
-      </tr>
-      <tr>
-        <td>Roy</td>
-        <td>Smith</td>
-        <td>9623</td>
-        <td>Quality Assurance</td>
-        <td>$48,000</td>
-        <td style="text-align: center"><button>Delete</button></td>
-      </tr>
-      <tr class="blank_row"><td colspan="6"></td></tr>
+      <!-- Try to add this to the end of table as this will leave a blank space on the bottom -->
+      <!-- <tr class="blank_row"><td colspan="6"></td></tr> -->
   </table>
 </body>
 </html>

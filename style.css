@@ -15,14 +15,6 @@ h2 {
     margin-top: 35px;
 }
 
-#input {
-    width: 108px;
-    height: 23px;
-    display: inline;
-    border: 2px solid black;
-    margin: 5px;
-    padding-left: 3px;
-}
 
 table, th, td {
     border: 2px solid black;
@@ -35,9 +27,9 @@ table, th, td {
     padding-left: 5px;
   }
 
-  button {
-    width: 70px;
-    height: 25px;
-    border-radius: 5px;
-
-  }
+button {
+  width: 70px;
+  height: 25px;
+  border-radius: 5px;
+  align-self: center;
+}
