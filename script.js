@@ -73,9 +73,12 @@ function showTotal() {
         salaryAsNumber = Number(salaryAsNumber);
         // grabbing one object at a time
         console.log(salaryAsNumber);
-        monthlySalary+= salaryAsNumber/ 12;
+        monthlySalary += salaryAsNumber/ 12;
         console.log(monthlySalary);
   }
   $('#monthly-Total').empty();
   $('#monthly-Total').append(monthlySalary.toFixed(2));
+  if (monthlySalary > 20000) {
+    $('#monthly-Total').parent().addClass('backGroundRed');
+  }
 }

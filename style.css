@@ -33,3 +33,8 @@ button {
   border-radius: 5px;
   align-self: center;
 }
+
+.backGroundRed {
+  background-color: red;
+  width: fit-content;
+}
