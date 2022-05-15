@@ -13,25 +13,27 @@
   <header>
     <h1>Salary Calculator</h1>
   </header>
+  <div>
     <h2>Add Employee</h2>
+  </div>
   <div id="inputs">
     <input id="input" placeholder="First Name" class="first_name"/>
     <input id="input" placeholder="Last Name" class="last_name"/>
     <input id="input" placeholder="ID" class="id"/>
     <input id="input" placeholder="Title" class="title"/>
     <input id="input" placeholder="Annual Salary" class="annual_salary"/>
+    <button style="display:block" type="button">Submit</button>
   </div>
   <div>
     <h2>Employees</h2>
   </div>
   <table>
       <tr>
-          <td>First Name</td>
-          <td>Last Name</td>
-          <td>ID</td>
-          <td>Title</td>
-          <td>Annual Salary</td>
-          <td></td>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
       </tr>
       <tr>
           <td>Jen</td>
@@ -39,7 +41,7 @@
           <td>4521</td>
           <td>Team Lead</td>
           <td>$80,000</td>
-          <td></td>
+          <td style="text-align: center"><button>Delete</button></td>
       </tr>
       <tr>
         <td>Maurice</td>
@@ -47,7 +49,7 @@
         <td>8724</td>
         <td>Support Team</td>
         <td>$58,000</td>
-        <td></td>
+        <td style="text-align: center"><button>Delete</button></td>
       </tr>
       <tr>
         <td>Roy</td>
@@ -55,8 +57,9 @@
         <td>9623</td>
         <td>Quality Assurance</td>
         <td>$48,000</td>
-        <td></td>
+        <td style="text-align: center"><button>Delete</button></td>
       </tr>
+      <tr class="blank_row"><td colspan="6"></td></tr>
   </table>
 </body>
 </html>
