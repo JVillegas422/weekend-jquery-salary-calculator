@@ -2,6 +2,8 @@ console.log('In script.js');
 
 $(document).ready(onReady);
 
+let employeeArray = [];
+
 function onReady() {
     console.log('Ready!');
     $(document).on('click', '#submit-btn', onSubmit);
@@ -26,6 +28,16 @@ function onSubmit() {
     let idNumber = $('#id-number').val();
     let jobTitle = $('#job-title').val();
     let salary = $('#annual-salary').val();
+    
+    let employObject = {
+        firstName: firstName,
+        lastName: lastName,
+        idNumber: idNumber,
+        jobTitle: jobTitle,
+        salary: salary
+    };
+
+    employeeArray.push(employObject);
 
     $('#employee-table').append(`
         <tr>
@@ -48,4 +60,3 @@ function onSubmit() {
     $('#job-title').val('');
     $('#annual-salary').val('');
 }
-
